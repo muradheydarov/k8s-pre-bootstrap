@@ -1,7 +1,7 @@
 ---
 - name: Setup Proxy
   hosts: k8snodes
-  remote_user: root
+  remote_user: sim
   become: yes
   become_method: sudo
   #gather_facts: no

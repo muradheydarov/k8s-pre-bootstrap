@@ -9,8 +9,7 @@
   include: pre_setup.yml
 
 - name: Include task to setup nfs
-  include: setup_nfs.yml
-  hosts: masters
+  include: setup_nfs.yml  
   when: setup_nfs
 
 # - name: Include task to disable swap
