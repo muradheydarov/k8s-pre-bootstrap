@@ -1,5 +1,5 @@
 ---
-- name: Add the OS specific variables
+- name: Add the OS specific variables 
   include_vars: "{{ item }}"
   with_first_found:
     - "{{ ansible_os_family }}{{ ansible_distribution_major_version }}.yml"
@@ -10,7 +10,7 @@
 
 - name: Include task to setup nfs
   include: setup_nfs.yml
-  hosts: 
+  hosts: masters
   when: setup_nfs
 
 # - name: Include task to disable swap
