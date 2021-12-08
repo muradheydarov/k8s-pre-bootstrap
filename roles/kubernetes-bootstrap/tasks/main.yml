@@ -8,10 +8,12 @@
 - name: Include Pre-reqs setup task
   include: pre_setup.yml
 
-- name: Include task to disable swap
-  include: setup_nfs.yml  
+- name: Include task to setup nfs
+  include: setup_nfs.yml
+  hosts: 
+  when: setup_nfs
 
-# - name: Include task to setup nfs
+# - name: Include task to disable swap
 #   include: disable_swap.yml
 
 # - name: Include task to configure timezone and ntp
